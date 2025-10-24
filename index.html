@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Remova LLC - We Remove, Restore and Renew</title>
+    <link rel="icon" href="./img/logo-remova.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6b4c8a;
+            --secondary: #4a3561;
+            --accent: #c9a8d8;
+            --light: #f8f5fb;
+            --dark: #2d2235;
+            --gray: #6c757d;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Open Sans", sans-serif;
+            background: #ffffff;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+        }
+        
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            box-shadow: 0 4px 20px rgba(107, 76, 138, 0.15);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 6px 25px rgba(107, 76, 138, 0.25);
+        }
+        
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff !important;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .navbar-brand span {
+            color: var(--accent);
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent) !important;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(107, 76, 138, 0.95) 0%, rgba(74, 53, 97, 0.9) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236b4c8a" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 120px 0 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(201, 168, 216, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero .tagline {
+            font-size: 1.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            border: none;
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(107, 76, 138, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(107, 76, 138, 0.4);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-outline-custom-2{
+            background: transparent;
+            border: 2px solid rgba(0, 0, 0, 0.9);
+            color: #000000;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-outline-custom:hover {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        /* ABOUT SECTION */
+        .about-section {
+            padding: 100px 0;
+            background: var(--light);
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 2px;
+        }
+        
+        .about-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(107, 76, 138, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(107, 76, 138, 0.2);
+            border-color: var(--accent);
+        }
+        
+        .about-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(107, 76, 138, 0.2);
+        }
+        
+        .value-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #ffffff;
+            font-size: 1.3rem;
+        }
+        
+        /* SERVICES SECTION */
+        .services-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, #ffffff 0%, var(--light) 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            height: 100%;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover::before {
+            transform: translateY(0);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(107, 76, 138, 0.2);
+            border-color: var(--primary);
+        }
+        
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 30px rgba(107, 76, 138, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: rotate(360deg) scale(1.1);
+        }
+        
+        .service-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--gray);
+        }
+        
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* SAFETY SECTION */
+        .safety-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: #ffffff;
+            position: relative;
+        }
+        
+        .safety-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .safety-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+        
+        .safety-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        /* GALLERY SECTION */
+        .gallery-section {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(107, 76, 138, 0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(107, 76, 138, 0.9) 0%, transparent 100%);
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+        
+        .contact-card {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(107, 76, 138, 0.1);
+            height: 100%;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #ffffff;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(107, 76, 138, 0.15);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #ffffff;
+            flex-shrink: 0;
+        }
+        
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-brand {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-tagline {
+            color: var(--accent);
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* SCROLL ANIMATIONS */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-tools"></i>
+                REMOVA<span>LLC</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 hero-content" data-aos="fade-right">
+                    <div class="hero-badge">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        Serving Braselton, GA & Surrounding Areas
+                    </div>
+                    <h1 class="animate__animated animate__fadeInUp">
+                        We Transform Spaces with Excellence
+                    </h1>
+                    <p class="tagline animate__animated animate__fadeInUp animate__delay-1s">
+                        "We Remove, Restore and Renew"
+                    </p>
+                    <p class="animate__animated animate__fadeInUp animate__delay-2s">
+                        Comprehensive remodeling, cleaning, and property maintenance services. 
+                        Fast, safe, and reliable solutions for property owners and managers.
+                    </p>
+                    <div class="d-flex gap-3 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
+                        <a href="#contact" class="btn btn-primary-custom">
+                            <i class="fas fa-phone me-2"></i>Get a Quote
+                        </a>
+                        <a href="#services" class="btn btn-outline-custom">
+                            <i class="fas fa-clipboard-list me-2"></i>Our Services
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                            <span class="stat-number">9+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Professional Team</span>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Who We Are</h2>
+                <p class="lead text-muted mt-4">Your trusted partner for property transformation and maintenance</p>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-card text-center">
+                        <div class="about-icon mx-auto">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Quality</h4>
+                        <p class="text-muted">Excellence in every project we complete</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-card text-center">
+                        <div class="about-icon mx-auto">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Experience</h4>
+                        <p class="text-muted">More than 9 years in the industry</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="about-card text-center">
+                        <div class="about-icon mx-auto">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Professionalism</h4>
+                        <p class="text-muted">Professional team at your service</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="about-card text-center">
+                        <div class="about-icon mx-auto">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Reliability</h4>
+                        <p class="text-muted">Fast, safe, and reliable solutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="mb-4">Remova LLC</h3>
+                    <p class="lead text-muted mb-4">
+                        A multi-service company specializing in remodeling, cleaning, and comprehensive property maintenance.
+                    </p>
+                    <p class="text-muted">
+                        We understand the needs of Property Managers and operate with responsibility, transparency, 
+                        and detail-oriented service. Our approach combines technical expertise, human attention, 
+                        and clear communication to ensure long-lasting results and stress-free service.
+                    </p>
+                    <p class="text-muted mb-4">
+                        We are the operational partner that cares for every property as if it were our own.
+                    </p>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div>
+                                    <h5>Mission</h5>
+                                    <p class="small text-muted mb-0">
+                                        Provide comprehensive services that add value, safety, and visual enhancement
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div>
+                                    <h5>Vision</h5>
+                                    <p class="small text-muted mb-0">
+                                        To become the preferred choice for remodeling and property maintenance in Georgia
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800" 
+                             alt="Professional team" 
+                             class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">What We Do</h2>
+                <p class="lead text-muted mt-4">Comprehensive solutions for all your property needs</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Remodeling & Restoration -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h4>Remodeling & Restoration</h4>
+                        <ul class="service-list text-start">
+                            <li>Interior and exterior renovations</li>
+                            <li>Basic structural repairs</li>
+                            <li>Flooring and surface installation</li>
+                            <li>Drywall, texture & finishing</li>
+                            <li>Post-damage repairs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cleaning & Property Care -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h4>Cleaning & Property Care</h4>
+                        <ul class="service-list text-start">
+                            <li>Deep and general cleaning</li>
+                            <li>Move-in / Move-out cleaning</li>
+                            <li>Junk removal & haul away</li>
+                            <li>Pressure washing</li>
+                            <li>Space sanitization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Landscaping & Outdoor -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h4>Landscaping & Outdoor</h4>
+                        <ul class="service-list text-start">
+                            <li>Lawn care and mowing</li>
+                            <li>Shrub and small tree trimming</li>
+                            <li>Green area installation</li>
+                            <li>Yard cleanup and debris removal</li>
+                            <li>Decorative gardening</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Maintenance Services -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h4>Maintenance & Specialized</h4>
+                        <ul class="service-list text-start">
+                            <li>Selective demolition</li>
+                            <li>Interior & exterior painting</li>
+                            <li>Paint removal services</li>
+                            <li>Minor repairs & preventive maintenance</li>
+                            <li>Property management support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Installation Services -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-toolbox"></i>
+                        </div>
+                        <h4>Installation Services</h4>
+                        <ul class="service-list text-start">
+                            <li>Kitchen & bathroom cabinets</li>
+                            <li>Door installation & locks</li>
+                            <li>Bathtub/shower installation</li>
+                            <li>Toilet installation</li>
+                            <li>Range hood & mini-split AC</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Emergency Services -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>Emergency Response</h4>
+                        <ul class="service-list text-start">
+                            <li>24/7 availability for urgent matters</li>
+                            <li>Flood and leak response</li>
+                            <li>Damage assessment</li>
+                            <li>Immediate repairs</li>
+                            <li>Emergency cleaning services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY SECTION -->
+    <section class="safety-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold">Our Commitment to Safety</h2>
+                <p class="lead mt-3">Safety comes first in everything we do</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="safety-card">
+                        <div class="safety-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h5>Protected Team</h5>
+                        <p>Our crew uses proper safety equipment at all times</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="safety-card">
+                        <div class="safety-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h5>Safe Practices</h5>
+                        <p>We follow responsible procedures and protocols</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="safety-card">
+                        <div class="safety-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h5>Direct Supervision</h5>
+                        <p>Constant oversight on every project</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="safety-card">
+                        <div class="safety-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h5>Always Available</h5>
+                        <p>Ricardo Roche: 706-773-0121<br>Available for urgent matters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Before & After</h2>
+                <p class="lead text-muted mt-4">See the transformation we bring to every project</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h4 class="text-center mb-4">Before</h4>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="Before 1">
+                        <div class="gallery-overlay">
+                            <h5 class="text-white">Kitchen Remodel - Before</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h4 class="text-center mb-4">After</h4>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600" alt="After 1">
+                        <div class="gallery-overlay">
+                            <h5 class="text-white">Kitchen Remodel - After</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600" alt="Before 2">
+                        <div class="gallery-overlay">
+                            <h5 class="text-white">Bathroom Renovation - Before</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600" alt="After 2">
+                        <div class="gallery-overlay">
+                            <h5 class="text-white">Bathroom Renovation - After</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <p class="lead text-muted">Ready to transform your property?</p>
+                <a href="#contact" class="btn btn-primary-custom btn-lg mt-3">
+                    <i class="fas fa-envelope me-2"></i>Request Your Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="lead text-muted mt-4">We're here to help with all your property needs</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h3 class="mb-4">Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Owner</h5>
+                                <p class="mb-0 text-muted">Ricardo Roche</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Phone</h5>
+                                <p class="mb-0">
+                                    <a href="tel:706-773-0121" class="text-decoration-none">706-773-0121</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Email</h5>
+                                <p class="mb-0">
+                                    <a href="mailto:Removainfo@gmail.com" class="text-decoration-none">Removainfo@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Address</h5>
+                                <p class="mb-0 text-muted">Braselton, GA</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <a href="tel:706-773-0121" class="btn btn-primary-custom w-100 mb-3">
+                                <i class="fas fa-phone me-2"></i>Call Now
+                            </a>
+                            <a href="mailto:Removainfo@gmail.com" class="btn btn-outline-custom-2 w-100">
+                                <i class="fas fa-envelope me-2"></i>Send Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105642.77419!2d-83.7982!3d34.1091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a3a3e9e3e3e3%3A0x1234567890!2sBraselton%2C%20GA!5e0!3m2!1sen!2sus!4v1234567890"
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">REMOVA<span style="color: var(--accent);">LLC</span></div>
+                    <p class="footer-tagline">"We Remove, Restore and Renew"</p>
+                    <p class="text-muted">
+                        Your trusted partner for remodeling, cleaning, and comprehensive property maintenance in Georgia.
+                    </p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#services">Remodeling</a></li>
+                        <li><a href="#services">Cleaning</a></li>
+                        <li><a href="#services">Landscaping</a></li>
+                        <li><a href="#services">Maintenance</a></li>
+                        <li><a href="#services">Emergency</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone me-2"></i>706-773-0121</li>
+                        <li><i class="fas fa-envelope me-2"></i>Removainfo@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Braselton, GA</li>
+                        <li><i class="fas fa-globe me-2"></i>Removausa.vip</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1);">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Remova LLC. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">More than 9 years of experience · Quality · Professionalism</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
