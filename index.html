@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Remova LLC - We Remove, Restore and Renew</title>
-    <link rel="icon" href="./img/logo-remova.png">
+    <link rel="icon" href="./img/logo.ico">
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- AOS Animations -->
@@ -23,25 +26,30 @@
             --gray: #6c757d;
             --success: #28a745;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: "Open Sans", sans-serif;
             background: #ffffff;
             color: var(--dark);
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: "Montserrat", sans-serif;
             font-weight: 700;
         }
-        
+
         /* NAVBAR */
         .navbar {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -49,12 +57,12 @@
             padding: 1rem 0;
             transition: all 0.3s ease;
         }
-        
+
         .navbar.scrolled {
             padding: 0.5rem 0;
             box-shadow: 0 6px 25px rgba(107, 76, 138, 0.25);
         }
-        
+
         .navbar-brand {
             font-size: 1.8rem;
             font-weight: 800;
@@ -64,11 +72,11 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .navbar-brand span {
             color: var(--accent);
         }
-        
+
         .nav-link {
             color: rgba(255, 255, 255, 0.9) !important;
             font-weight: 500;
@@ -76,12 +84,12 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .nav-link:hover {
             color: var(--accent) !important;
             transform: translateY(-2px);
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -92,16 +100,16 @@
             background: var(--accent);
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         /* HERO SECTION */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, rgba(107, 76, 138, 0.95) 0%, rgba(74, 53, 97, 0.9) 100%), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236b4c8a" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background: linear-gradient(135deg, rgba(107, 76, 138, 0.95) 0%, rgba(74, 53, 97, 0.9) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236b4c8a" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -110,7 +118,7 @@
             position: relative;
             padding: 120px 0 80px;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -120,12 +128,12 @@
             bottom: 0;
             background: radial-gradient(circle at 20% 50%, rgba(201, 168, 216, 0.1) 0%, transparent 50%);
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        
+
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 800;
@@ -134,7 +142,7 @@
             margin-bottom: 1.5rem;
             text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
         }
-        
+
         .hero .tagline {
             font-size: 1.8rem;
             color: var(--accent);
@@ -142,14 +150,14 @@
             margin-bottom: 1rem;
             font-style: italic;
         }
-        
+
         .hero p {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.95);
             margin-bottom: 2rem;
             line-height: 1.8;
         }
-        
+
         .hero-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.15);
@@ -161,31 +169,31 @@
             font-weight: 600;
             margin-bottom: 2rem;
         }
-        
+
         .hero-stats {
             display: flex;
             gap: 3rem;
             margin-top: 3rem;
         }
-        
+
         .stat-item {
             text-align: center;
         }
-        
+
         .stat-number {
             font-size: 3rem;
             font-weight: 800;
             color: var(--accent);
             display: block;
         }
-        
+
         .stat-label {
             font-size: 0.95rem;
             color: rgba(255, 255, 255, 0.9);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .btn-primary-custom {
             background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
             border: none;
@@ -199,13 +207,13 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .btn-primary-custom:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(107, 76, 138, 0.4);
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
         }
-        
+
         .btn-outline-custom {
             background: transparent;
             border: 2px solid rgba(255, 255, 255, 0.9);
@@ -218,8 +226,8 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
-        .btn-outline-custom-2{
+
+        .btn-outline-custom-2 {
             background: transparent;
             border: 2px solid rgba(0, 0, 0, 0.9);
             color: #000000;
@@ -239,14 +247,14 @@
             border-color: var(--accent);
             color: var(--accent);
         }
-        
+
         /* ABOUT SECTION */
         .about-section {
             padding: 100px 0;
             background: var(--light);
             position: relative;
         }
-        
+
         .section-title {
             font-size: 2.8rem;
             color: var(--primary);
@@ -254,7 +262,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -265,7 +273,7 @@
             background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
             border-radius: 2px;
         }
-        
+
         .about-card {
             background: #ffffff;
             border-radius: 20px;
@@ -275,13 +283,13 @@
             height: 100%;
             border: 2px solid transparent;
         }
-        
+
         .about-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(107, 76, 138, 0.2);
             border-color: var(--accent);
         }
-        
+
         .about-icon {
             width: 80px;
             height: 80px;
@@ -295,14 +303,14 @@
             margin-bottom: 1.5rem;
             box-shadow: 0 8px 20px rgba(107, 76, 138, 0.2);
         }
-        
+
         .value-item {
             display: flex;
             align-items: start;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .value-icon {
             width: 50px;
             height: 50px;
@@ -315,13 +323,13 @@
             color: #ffffff;
             font-size: 1.3rem;
         }
-        
+
         /* SERVICES SECTION */
         .services-section {
             padding: 100px 0;
             background: #ffffff;
         }
-        
+
         .service-card {
             background: linear-gradient(135deg, #ffffff 0%, var(--light) 100%);
             border-radius: 20px;
@@ -332,7 +340,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .service-card::before {
             content: '';
             position: absolute;
@@ -344,17 +352,17 @@
             transform: translateY(-5px);
             transition: all 0.3s ease;
         }
-        
+
         .service-card:hover::before {
             transform: translateY(0);
         }
-        
+
         .service-card:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: 0 25px 60px rgba(107, 76, 138, 0.2);
             border-color: var(--primary);
         }
-        
+
         .service-icon {
             width: 90px;
             height: 90px;
@@ -369,29 +377,29 @@
             box-shadow: 0 10px 30px rgba(107, 76, 138, 0.3);
             transition: all 0.3s ease;
         }
-        
+
         .service-card:hover .service-icon {
             transform: rotate(360deg) scale(1.1);
         }
-        
+
         .service-card h4 {
             color: var(--primary);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
-        
+
         .service-list {
             list-style: none;
             padding: 0;
         }
-        
+
         .service-list li {
             padding: 0.5rem 0;
             padding-left: 2rem;
             position: relative;
             color: var(--gray);
         }
-        
+
         .service-list li::before {
             content: '✓';
             position: absolute;
@@ -400,7 +408,7 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
-        
+
         /* SAFETY SECTION */
         .safety-section {
             padding: 100px 0;
@@ -408,7 +416,7 @@
             color: #ffffff;
             position: relative;
         }
-        
+
         .safety-card {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -418,31 +426,31 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-        
+
         .safety-card:hover {
             background: rgba(255, 255, 255, 0.15);
             transform: scale(1.05);
         }
-        
+
         .safety-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
             color: var(--accent);
         }
-        
+
         /* GALLERY SECTION */
         .gallery-section {
             padding: 100px 0;
             background: var(--light);
         }
-        
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .gallery-item {
             position: relative;
             border-radius: 20px;
@@ -451,23 +459,23 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.05);
             box-shadow: 0 20px 50px rgba(107, 76, 138, 0.3);
         }
-        
+
         .gallery-item img {
             width: 100%;
             height: 300px;
             object-fit: cover;
             transition: all 0.3s ease;
         }
-        
+
         .gallery-item:hover img {
             transform: scale(1.1);
         }
-        
+
         .gallery-overlay {
             position: absolute;
             bottom: 0;
@@ -478,17 +486,17 @@
             transform: translateY(100%);
             transition: all 0.3s ease;
         }
-        
+
         .gallery-item:hover .gallery-overlay {
             transform: translateY(0);
         }
-        
+
         /* CONTACT SECTION */
         .contact-section {
             padding: 100px 0;
             background: #ffffff;
         }
-        
+
         .contact-card {
             background: var(--light);
             border-radius: 20px;
@@ -496,7 +504,7 @@
             box-shadow: 0 10px 40px rgba(107, 76, 138, 0.1);
             height: 100%;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
@@ -507,12 +515,12 @@
             border-radius: 15px;
             transition: all 0.3s ease;
         }
-        
+
         .contact-item:hover {
             transform: translateX(10px);
             box-shadow: 0 8px 20px rgba(107, 76, 138, 0.15);
         }
-        
+
         .contact-icon {
             width: 60px;
             height: 60px;
@@ -525,61 +533,61 @@
             color: #ffffff;
             flex-shrink: 0;
         }
-        
+
         .map-container {
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             height: 500px;
         }
-        
+
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: 0;
         }
-        
+
         /* FOOTER */
         footer {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
             color: rgba(255, 255, 255, 0.9);
             padding: 60px 0 30px;
         }
-        
+
         .footer-brand {
             font-size: 2rem;
             font-weight: 800;
             color: #ffffff;
             margin-bottom: 1rem;
         }
-        
+
         .footer-tagline {
             color: var(--accent);
             font-style: italic;
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .footer-links {
             list-style: none;
             padding: 0;
         }
-        
+
         .footer-links li {
             margin-bottom: 0.8rem;
         }
-        
+
         .footer-links a {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
+
         .footer-links a:hover {
             color: var(--accent);
             padding-left: 5px;
         }
-        
+
         .social-links a {
             display: inline-flex;
             align-items: center;
@@ -593,55 +601,175 @@
             margin-right: 0.5rem;
             transition: all 0.3s ease;
         }
-        
+
         .social-links a:hover {
             background: var(--accent);
             transform: translateY(-5px);
         }
-        
+
+
+
+
+
+        /* Gallery Carousel Styles */
+        #galleryCarousel {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(107, 76, 138, 0.1);
+        }
+
+        .gallery-img {
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(107, 76, 138, 0.3);
+        }
+
+        #galleryCarousel .carousel-control-prev,
+        #galleryCarousel .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.9;
+        }
+
+        #galleryCarousel .carousel-control-prev:hover,
+        #galleryCarousel .carousel-control-next:hover {
+            opacity: 1;
+        }
+
+        #galleryCarousel .carousel-indicators {
+            margin-bottom: -2rem;
+        }
+
+        #galleryCarousel .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-img {
+                height: 200px;
+            }
+
+            #galleryCarousel .row.g-3 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .hero .tagline {
                 font-size: 1.3rem;
             }
-            
+
             .hero-stats {
                 flex-direction: column;
                 gap: 2rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         /* SCROLL ANIMATIONS */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease;
         }
-        
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        .hero-image-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 30px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-image {
+                margin-top: 3rem;
+                max-height: 400px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        /* Navbar Logo */
+        .navbar-logo {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-logo {
+                height: 30px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="fas fa-tools"></i>
+                <img src="./img/hero.png" alt="Remova LLC Logo" class="navbar-logo">
                 REMOVA<span>LLC</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -663,7 +791,7 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8 hero-content" data-aos="fade-right">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
                     <div class="hero-badge">
                         <i class="fas fa-map-marker-alt me-2"></i>
                         Serving Braselton, GA & Surrounding Areas
@@ -675,7 +803,7 @@
                         "We Remove, Restore and Renew"
                     </p>
                     <p class="animate__animated animate__fadeInUp animate__delay-2s">
-                        Comprehensive remodeling, cleaning, and property maintenance services. 
+                        Comprehensive remodeling, cleaning, and property maintenance services.
                         Fast, safe, and reliable solutions for property owners and managers.
                     </p>
                     <div class="d-flex gap-3 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
@@ -701,6 +829,13 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- IMAGEN DERECHA -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image-container">
+                        <img src="./img/hero.png" alt="Remova LLC Professional Services" class="hero-image">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -712,7 +847,7 @@
                 <h2 class="section-title">Who We Are</h2>
                 <p class="lead text-muted mt-4">Your trusted partner for property transformation and maintenance</p>
             </div>
-            
+
             <div class="row g-4 mb-5">
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="about-card text-center">
@@ -756,17 +891,18 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <h3 class="mb-4">Remova LLC</h3>
                     <p class="lead text-muted mb-4">
-                        A multi-service company specializing in remodeling, cleaning, and comprehensive property maintenance.
+                        A multi-service company specializing in remodeling, cleaning, and comprehensive property
+                        maintenance.
                     </p>
                     <p class="text-muted">
-                        We understand the needs of Property Managers and operate with responsibility, transparency, 
-                        and detail-oriented service. Our approach combines technical expertise, human attention, 
+                        We understand the needs of Property Managers and operate with responsibility, transparency,
+                        and detail-oriented service. Our approach combines technical expertise, human attention,
                         and clear communication to ensure long-lasting results and stress-free service.
                     </p>
                     <p class="text-muted mb-4">
                         We are the operational partner that cares for every property as if it were our own.
                     </p>
-                    
+
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="value-item">
@@ -789,19 +925,19 @@
                                 <div>
                                     <h5>Vision</h5>
                                     <p class="small text-muted mb-0">
-                                        To become the preferred choice for remodeling and property maintenance in Georgia
+                                        To become the preferred choice for remodeling and property maintenance in
+                                        Georgia
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="position-relative">
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800" 
-                             alt="Professional team" 
-                             class="img-fluid rounded shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800"
+                            alt="Professional team" class="img-fluid rounded shadow-lg">
                     </div>
                 </div>
             </div>
@@ -972,48 +1108,161 @@
     </section>
 
     <!-- GALLERY SECTION -->
+    <!-- GALLERY SECTION -->
     <section id="gallery" class="gallery-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Before & After</h2>
-                <p class="lead text-muted mt-4">See the transformation we bring to every project</p>
+                <h2 class="section-title">Our Work Gallery</h2>
+                <p class="lead text-muted mt-4">See the quality and transformation we bring to every project</p>
             </div>
 
-            <div class="row g-4">
-                <div class="col-md-6" data-aos="fade-right">
-                    <h4 class="text-center mb-4">Before</h4>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600" alt="Before 1">
-                        <div class="gallery-overlay">
-                            <h5 class="text-white">Kitchen Remodel - Before</h5>
+            <!-- Carrusel de Galería -->
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="6"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="7"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="8"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="9"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/1.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 1"></div>
+                            <div class="col-md-3"><img src="./img/2.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 2"></div>
+                            <div class="col-md-3"><img src="./img/3.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 3"></div>
+                            <div class="col-md-3"><img src="./img/4.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 4"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/5.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 5"></div>
+                            <div class="col-md-3"><img src="./img/6.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 6"></div>
+                            <div class="col-md-3"><img src="./img/7.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 7"></div>
+                            <div class="col-md-3"><img src="./img/8.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 8"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/9.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 9"></div>
+                            <div class="col-md-3"><img src="./img/10.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 10"></div>
+                            <div class="col-md-3"><img src="./img/11.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 11"></div>
+                            <div class="col-md-3"><img src="./img/12.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 12"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/13.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 13"></div>
+                            <div class="col-md-3"><img src="./img/14.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 14"></div>
+                            <div class="col-md-3"><img src="./img/15.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 15"></div>
+                            <div class="col-md-3"><img src="./img/16.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 16"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/17.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 17"></div>
+                            <div class="col-md-3"><img src="./img/18.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 18"></div>
+                            <div class="col-md-3"><img src="./img/19.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 19"></div>
+                            <div class="col-md-3"><img src="./img/20.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 20"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/21.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 21"></div>
+                            <div class="col-md-3"><img src="./img/22.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 22"></div>
+                            <div class="col-md-3"><img src="./img/23.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 23"></div>
+                            <div class="col-md-3"><img src="./img/24.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 24"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/25.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 25"></div>
+                            <div class="col-md-3"><img src="./img/26.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 26"></div>
+                            <div class="col-md-3"><img src="./img/27.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 27"></div>
+                            <div class="col-md-3"><img src="./img/28.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 28"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/29.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 29"></div>
+                            <div class="col-md-3"><img src="./img/30.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 30"></div>
+                            <div class="col-md-3"><img src="./img/31.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 31"></div>
+                            <div class="col-md-3"><img src="./img/32.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 32"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/33.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 33"></div>
+                            <div class="col-md-3"><img src="./img/34.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 34"></div>
+                            <div class="col-md-3"><img src="./img/35.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 35"></div>
+                            <div class="col-md-3"><img src="./img/36.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 36"></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-3">
+                            <div class="col-md-3"><img src="./img/37.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 37"></div>
+                            <div class="col-md-3"><img src="./img/38.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 38"></div>
+                            <div class="col-md-3"><img src="./img/39.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 39"></div>
+                            <div class="col-md-3"><img src="./img/40.jpg" class="d-block w-100 gallery-img"
+                                    alt="Project 40"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <h4 class="text-center mb-4">After</h4>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600" alt="After 1">
-                        <div class="gallery-overlay">
-                            <h5 class="text-white">Kitchen Remodel - After</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600" alt="Before 2">
-                        <div class="gallery-overlay">
-                            <h5 class="text-white">Bathroom Renovation - Before</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600" alt="After 2">
-                        <div class="gallery-overlay">
-                            <h5 class="text-white">Bathroom Renovation - After</h5>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
             <div class="text-center mt-5" data-aos="fade-up">
@@ -1037,7 +1286,7 @@
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="contact-card">
                         <h3 class="mb-4">Contact Information</h3>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-user"></i>
@@ -1067,7 +1316,8 @@
                             <div>
                                 <h5 class="mb-1">Email</h5>
                                 <p class="mb-0">
-                                    <a href="mailto:Removainfo@gmail.com" class="text-decoration-none">Removainfo@gmail.com</a>
+                                    <a href="mailto:Removainfo@gmail.com"
+                                        class="text-decoration-none">Removainfo@gmail.com</a>
                                 </p>
                             </div>
                         </div>
@@ -1096,10 +1346,9 @@
 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="map-container">
-                        <iframe 
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105642.77419!2d-83.7982!3d34.1091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a3a3e9e3e3e3%3A0x1234567890!2sBraselton%2C%20GA!5e0!3m2!1sen!2sus!4v1234567890"
-                            allowfullscreen="" 
-                            loading="lazy">
+                            allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -1115,10 +1364,11 @@
                     <div class="footer-brand">REMOVA<span style="color: var(--accent);">LLC</span></div>
                     <p class="footer-tagline">"We Remove, Restore and Renew"</p>
                     <p class="text-muted">
-                        Your trusted partner for remodeling, cleaning, and comprehensive property maintenance in Georgia.
+                        Your trusted partner for remodeling, cleaning, and comprehensive property maintenance in
+                        Georgia.
                     </p>
                 </div>
-                
+
                 <div class="col-lg-2 col-md-6">
                     <h5 class="mb-4">Quick Links</h5>
                     <ul class="footer-links">
@@ -1129,7 +1379,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Services</h5>
                     <ul class="footer-links">
@@ -1140,7 +1390,7 @@
                         <li><a href="#services">Emergency</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4">Contact Info</h5>
                     <ul class="footer-links">
@@ -1151,9 +1401,9 @@
                     </ul>
                 </div>
             </div>
-            
+
             <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.1);">
-            
+
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
                     <p class="mb-0">&copy; 2025 Remova LLC. All rights reserved.</p>
@@ -1178,7 +1428,7 @@
         });
 
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -1207,4 +1457,5 @@
         });
     </script>
 </body>
+
 </html>
